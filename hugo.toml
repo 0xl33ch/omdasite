@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://omdasite.pages.dev/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Hello World'
 theme = 'PaperMod'
