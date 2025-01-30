@@ -1,4 +1,6 @@
 baseURL = 'https://omdasite.pages.dev/'
 languageCode = 'en-us'
-title = 'Hello Omda'
+title = "Emad's Blog"
 theme = 'PaperMod'
+[params.assets]
+favicon = "favicon.ico"
