@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "hugo --minify"
+  },
+  "dependencies": {
+    "hugo-bin": "^0.142.0"
+  }
+}
