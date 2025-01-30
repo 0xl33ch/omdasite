@@ -1,9 +1,16 @@
 {
+  "name": "your-hugo-site",
+  "version": "1.0.0",
   "scripts": {
-    "build": "hugo --minify"
+    "build": "hugo --gc --minify",  // Default Hugo build command
+    "dev": "hugo server -D"         // Local development command (optional)
   },
   "dependencies": {
-    "hugo-bin": "^0.142.0"
+    // Add Node.js dependencies here (if needed):
+    "postcss-cli": "^10.0.0",      // Example: For PostCSS processing
+    "autoprefixer": "^10.0.0"      // Example: For CSS autoprefixing
+  },
+  "devDependencies": {
+    // Add dev-only tools here (e.g., linters)
   }
 }
-
