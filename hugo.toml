@@ -1,4 +1,4 @@
-baseURL = 'https://omdasite.pages.dev/'
+baseURL = 'https://emad.blog'
 languageCode = 'en-us'
 title = "Emad's Blog"
 theme = 'PaperMod'
