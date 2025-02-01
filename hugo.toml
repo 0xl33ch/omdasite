@@ -2,5 +2,9 @@ baseURL = 'https://omdasite.pages.dev/'
 languageCode = 'en-us'
 title = "Emad's Blog"
 theme = 'PaperMod'
+
+[params]
+  customCSS = ["css/custom.css"]  # Add this line to load custom CSS
+
 [params.assets]
-favicon = "favicon.ico"
+  favicon = "favicon.ico"

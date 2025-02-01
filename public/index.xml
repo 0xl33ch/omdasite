@@ -13,7 +13,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;My name is Emad El Araby i am a Penetration Testing Engineer with over six years of experience in network, mobile, and web application security. I specialize in identifying vulnerabilities, conducting in-depth security assessments, and simulating real-world attack scenarios to strengthen cybersecurity defenses.&lt;/p&gt;
-&lt;p&gt;I hold multiple industry-recognized certifications, including CRTP, CRTE, eWPTX, GSEC, GWAPT, GPEN, GMOB, GXPN, OSCP, and OSWE, demonstrating my expertise in offensive security and advanced exploitation techniques&lt;/p&gt;</description>
+&lt;p&gt;I hold multiple industry-recognized certifications, including &lt;code&gt;CRTP, CRTE, eWPTX, GSEC, GWAPT, GPEN, GMOB, GXPN, OSCP, and OSWE&lt;/code&gt; demonstrating my expertise in offensive security and advanced exploitation techniques.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
