@@ -26,3 +26,8 @@ theme = 'PaperMod'
   url = "/about/"
   weight = 3
   pre = "<i class='fas fa-heart'></i>&nbsp;"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
