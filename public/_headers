@@ -1,11 +1,11 @@
 /*
   Content-Security-Policy: 
-    default-src 'self' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com;
-    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://static.cloudflareinsights.com;
-    style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://use.fontawesome.com;  <!-- Add this -->
-    font-src 'self' https://cdnjs.cloudflare.com https://use.fontawesome.com data:;  <!-- Add this -->
-    img-src 'self' data:;
+    default-src 'self' https://static.cloudflareinsights.com;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com;
+    style-src 'self' 'unsafe-inline' 'self' https://cdnjs.cloudflare.com https://use.fontawesome.com;
+    font-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://use.fontawesome.com https://emad.blog data:;
     connect-src 'self' https://static.cloudflareinsights.com;
+    img-src 'self' data:;
     upgrade-insecure-requests;
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
