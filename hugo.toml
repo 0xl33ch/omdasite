@@ -5,6 +5,7 @@ theme = 'PaperMod'
 
 [params]
   customCSS = ["css/custom.css"]  # Add this line to load custom CSS
+  enableStaticFileDeploy = true
 
 [params.assets]
   favicon = "favicon.ico"
