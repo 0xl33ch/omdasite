@@ -4,8 +4,10 @@ title = "Emad's Blog"
 theme = 'PaperMod'
 
 [params]
-  customCSS = ["css/custom.css"]  # Add this line to load custom CSS
+  customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"]
+
   enableStaticFileDeploy = true
+
 
 [params.assets]
   favicon = "favicon.ico"
