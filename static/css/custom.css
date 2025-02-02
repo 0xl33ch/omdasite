@@ -8,3 +8,7 @@ code {
     display: inline-block !important;       /* Ensure it stays in one block */
   }
   
+i {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
