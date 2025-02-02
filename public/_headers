@@ -1,20 +1,4 @@
-/*
-  Content-Security-Policy: 
-    default-src 'self' https://github.com https://emad.blog;
-    script-src 'self' https://github.com https://emad.blog 'unsafe-inline' 'unsafe-eval';
-    style-src 'self' https://github.com https://emad.blog 'unsafe-inline';
-    font-src 'self' https://github.com https://emad.blog/webfonts/ data:;
-    img-src 'self' data: https://github.com https://emad.blog;
-    connect-src 'self' https://github.com https://emad.blog;
-    upgrade-insecure-requests;
-  X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
-  Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
-
-
-  /webfonts/*
+/webfonts/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=31536000
   Content-Type: font/woff2
