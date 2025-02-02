@@ -16,7 +16,7 @@ theme = 'PaperMod'
   name = "Home"
   url = "/"
   weight = 1
-  pre = "<i class='fas fa-home' style='font-family: FontAwesome;'></i>&nbsp;"
+  pre = "<i style='font-family: Font Awesome 6 Free; font-weight: 900;' class='fas fa-home'></i>&nbsp;"
 
 [[menu.main]]
   name = "Blog"
