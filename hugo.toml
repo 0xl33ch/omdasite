@@ -1,8 +1,8 @@
 baseURL = 'https://emad.blog/'
 languageCode = 'en-us'
 title = "Emad's Blog"
-theme = './hugo-PaperMod'
-themesDir = '.'
+theme = 'hugo-PaperMod'
+
 
 [params]
   # Load custom CSS that includes @font-face for Font Awesome
