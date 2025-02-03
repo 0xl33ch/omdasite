@@ -1,13 +1,16 @@
 baseURL = 'https://emad.blog/'
 languageCode = 'en-us'
 title = "Emad's Blog"
-theme = 'hugo-PaperMod'
+theme = './hugo-PaperMod'
+themesDir = '.'
 
 [params]
-  customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"]
+  # Load custom CSS that includes @font-face for Font Awesome
+    customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"]
+
+
 
   enableStaticFileDeploy = true
-
 
 [params.assets]
   favicon = "favicon.ico"
