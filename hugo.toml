@@ -4,7 +4,7 @@ title = "Emad's Blog"
 theme = 'PaperMod'
 
 [params]
-  customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"]
+  customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"]
 
   enableStaticFileDeploy = true
 
@@ -16,19 +16,19 @@ theme = 'PaperMod'
   name = "Home"
   url = "/"
   weight = 1
-  pre = "<i style='font-family: Font Awesome 6 Free; font-weight: 900;' class='fas fa-home'></i>&nbsp;"
+  pre = "<i class='fas fa-home'></i>&nbsp;"
 
 [[menu.main]]
   name = "Blog"
   url = "/blog/"
   weight = 2
-  pre = "<i class='fas fa-folder' style='font-family: FontAwesome;'></i>&nbsp;"
+  pre = "<i class='fas fa-folder'></i>&nbsp;"
 
 [[menu.main]]
   name = "About"
   url = "/about/"
   weight = 3
-  pre = "<i class='fas fa-heart' style='font-family: FontAwesome;'></i>&nbsp;"
+  pre = "<i class='fas fa-heart'></i>&nbsp;"
 
 [markup]
   [markup.goldmark]
