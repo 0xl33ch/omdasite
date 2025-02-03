@@ -1,7 +1,7 @@
 baseURL = 'https://emad.blog/'
 languageCode = 'en-us'
 title = "Emad's Blog"
-theme = 'PaperMod'
+theme = 'hugo-PaperMod'
 
 [params]
   customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"]
