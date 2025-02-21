@@ -1,6 +1,6 @@
 baseURL = 'https://emad.blog/'
 languageCode = 'en-us'
-title = "omda's Blog"
+title = "Emad's Blog"
 theme = 'hugo-PaperMod'
 
 
@@ -16,7 +16,7 @@ theme = 'hugo-PaperMod'
   favicon = "favicon.ico"
 
 [[menu.main]]
-  name = "Home2"
+  name = "Home"
   url = "/"
   weight = 1
   pre = "<i class='fas fa-home'></i>&nbsp;"
