@@ -23,8 +23,8 @@ theme = 'hugo-PaperMod'
   pre = "<i class='fas fa-home'></i>&nbsp;"
 
 [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
+  name = "POSTS"
+  url = "/posts/"
   weight = 2
   pre = "<i class='fas fa-folder'></i>&nbsp;"
 
