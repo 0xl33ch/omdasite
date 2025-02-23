@@ -1,6 +1,0 @@
-+++
-title = 'POSTS'
-
-+++
-
-Test POSTS
