@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:61963/about/</loc>
+  </url><url>
+    <loc>http://localhost:61963/categories/</loc>
+  </url><url>
+    <loc>http://localhost:61963/tags/cve_analysis/</loc>
+  </url><url>
+    <loc>http://localhost:61963/posts/cve-2023-23489-easy-digital-downloads-wordpress-plugin-less-314-unauthenticated-sqli/</loc>
+  </url><url>
+    <loc>http://localhost:61963/</loc>
+  </url><url>
+    <loc>http://localhost:61963/posts/</loc>
+  </url><url>
+    <loc>http://localhost:61963/tags/</loc>
+  </url><url>
+    <loc>http://localhost:61963/categories/web-security/</loc>
+  </url><url>
+    <loc>http://localhost:61963/tags/xdebug/</loc>
+  </url>
+</urlset>

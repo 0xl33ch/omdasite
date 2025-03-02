@@ -1,0 +1,9 @@
+/webfonts/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000
+  Content-Type: font/woff2; charset=utf-8
+
+/css/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=31536000
+  Content-Type: text/css

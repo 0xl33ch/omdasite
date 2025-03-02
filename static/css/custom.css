@@ -1,0 +1,28 @@
+code {
+    background-color: #2d2d2d !important;  /* Dark background */
+    color: #ffffff !important;            /* White text */
+    padding: 2px 6px;                      /* Adjust padding */
+    border-radius: 4px;                    /* Rounded corners */
+    font-size: 0.95em;                      /* Slightly smaller text */
+    white-space: nowrap !important;         /* Prevent line breaks */
+    display: inline-block !important;       /* Ensure it stays in one block */
+  }
+  
+  img[src$='#center']
+  {
+      display: block;
+      margin: 0.7rem auto;
+  }
+  
+  img[src$='#floatleft']
+  {
+      float: left;
+      margin: 0.7rem;
+  }
+  
+  img[src$='#floatright']
+  {
+      float: right;
+      margin: 0.7rem;
+  }
+  
