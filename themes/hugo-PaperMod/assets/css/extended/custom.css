@@ -1,19 +1,39 @@
+/* Home Page Styling */
 .home-content {
-  min-height: 70vh;
+  text-align: center;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .post-title {
-  font-size: 2.8rem !important;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 .post-subtitle {
   font-size: 1.4rem;
   color: var(--secondary);
-  font-weight: 400;
-  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.social-icons-home {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.social-icons-home a {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.social-icons-home a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
 }

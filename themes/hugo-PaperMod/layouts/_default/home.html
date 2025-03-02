@@ -2,5 +2,9 @@
 <div class="home-content" style="text-align: center; margin-top: 5rem;">
   <h1 class="post-title">Emad's Security Blog</h1>
   <p class="post-subtitle">Pentester</p>
+  {{/* Social Icons */}}
+  <div class="social-icons-home">
+    {{ partial "social_icons.html" (dict "Params" .Site.Params "size" "large") }}
+  </div>
 </div>
 {{ end }}

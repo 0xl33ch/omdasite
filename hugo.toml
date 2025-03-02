@@ -1,15 +1,22 @@
 baseURL = 'https://emad.blog/'
 languageCode = 'en-us'
-title = "Emad's Blog"
+title = "Security Blog"
 theme = 'hugo-PaperMod'
 
 
 [params]
   # Load custom CSS that includes @font-face for Font Awesome
-    customCSS = ["css/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"]
+    customCSS = ["css/custom.css","extended/custom.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"]
 
 
+ # Social Icons (Modify with your actual links)
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/emadmohamed1/"
 
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://x.com/0xl33ch"
 
   enableStaticFileDeploy = true
 
