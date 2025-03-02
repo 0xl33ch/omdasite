@@ -1,8 +1,16 @@
-<div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
-    {{- range site.Params.socialIcons }}
-    <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
-        title="{{ (.title | default .name) | title }}">
-        {{ partial "svg.html" . }}
-    </a>
-    {{- end }}
+{{- with .Params.socialIcons -}}
+<div class="social-icons">
+  {{- range . -}}
+    {{- if .icon -}}
+      {{- $icon := resources.Get .icon -}}
+      <a class="social-icons__link" href="{{ .url }}" target="_blank" rel="me noopener">
+        <span class="social-icons__icon">{{ $icon.Content | safeHTML }}</span>
+      </a>
+    {{- else -}}
+      <a class="social-icons__link" href="{{ .url }}" target="_blank" rel="me noopener" title="{{ .name }}">
+        <i class="fa-fw {{ if eq .name "x-twitter" }}fab fa-x-twitter{{ else }}fab fa-{{ .name }}{{ end }}"></i>
+      </a>
+    {{- end -}}
+  {{- end -}}
 </div>
+{{- end -}}

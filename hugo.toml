@@ -15,8 +15,9 @@ theme = 'hugo-PaperMod'
     url = "https://www.linkedin.com/in/emadmohamed1/"
 
   [[params.socialIcons]]
-    name = "twitter"
+    name = "x-twitter"
     url = "https://x.com/0xl33ch"
+    
 
   enableStaticFileDeploy = true
 
