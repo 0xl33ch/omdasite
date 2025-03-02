@@ -8,6 +8,8 @@ code {
     display: inline-block !important;       /* Ensure it stays in one block */
   }
   
+
+  
   img[src$='#center']
   {
       display: block;

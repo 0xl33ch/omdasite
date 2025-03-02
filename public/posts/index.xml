@@ -57,5 +57,23 @@ I got the path of Xdebug Configuration files &lt;code&gt;/usr/local/etc/php/conf
 &lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/cve-2023-23489/php-ini.png&#34;&gt;
 &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Hacking FirstBloodHackers v1.0</title>
+      <link>http://localhost:61963/posts/hacking-first-blood-hackers-v1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:61963/posts/hacking-first-blood-hackers-v1/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/first-blood-v1/First-Blood-v1.0-Poster.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In this article i will reveal techniques i used when pentesting a web application i will try on &lt;code&gt;FirstBloodHackers v1.0&lt;/code&gt; it&amp;rsquo;s a hospital website which is a hackevent of bugbountyhunter.com website&lt;/p&gt;
+&lt;p&gt;I opened burpsuite and opened the given url&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;://&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;f22246f644be&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;l33ch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;firstbloodhackers&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I added the url to scope to see only all the files related to this url
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/first-blood-v1/burp-scope.png&#34;&gt;
+Press here
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/first-blood-v1/press-here-with-mouse.png&#34;&gt;
+check this box
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/first-blood-v1/checkbox1.png&#34;&gt;
+Choose &lt;code&gt;Discover content&lt;/code&gt; from &lt;code&gt;Engagement tools&lt;/code&gt; to visit all the endpoints on the website
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:61963/images/first-blood-v1/content-discover1.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
