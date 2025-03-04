@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Hacking FastFoodHackings | Security Blog</title>
+<meta name="keywords" content="web_pentesting">
+<meta name="description" content="
+In this article I will continue revealing techniques I used when performing penetration testing on a web application I will try on FastFoodHackings it is a  small free demo website from bugbountyhunter.com website you can access it from this URL
+https://www.bugbountytraining.com/fastfoodhackings/
+I added the URL to scope to see only the files related to this URL
+
+Press here
+
+check this box
+
+Choose discover content from Engagement tools to Discover endpoints on the website
+">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/hacking-fastfoodhackings/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.447bd2e1681813a07d418e4a4544ae10d61d3e25a4652309b0030f421e29f26c.css" integrity="sha256-RHvS4WgYE6B9QY5KRUSuENYdPiWkZSMJsAMPQh4p8mw=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/hacking-fastfoodhackings/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Security Blog (Alt + H)">Security Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span><i class='fas fa-home'></i>&nbsp;Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span><i class='fas fa-folder'></i>&nbsp;Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span><i class='fas fa-heart'></i>&nbsp;About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Hacking FastFoodHackings
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p><img alt="Description of Image" loading="lazy" src="/images/fastfoodhackings/fastfoodhackings-poster.png"></p>
+<p>In this article I will continue revealing techniques I used when performing penetration testing on a web application I will try on <code>FastFoodHackings</code> it is a  small free demo website from bugbountyhunter.com website you can access it from this URL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><p>I added the URL to scope to see only the files related to this URL
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/burp-scope.png">
+Press here
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/press-here-with-mouse.png">
+check this box
+<img alt="Image" loading="lazy" src="/images/first-blood-v1/checkbox1.png">
+Choose <code>discover content</code> from <code>Engagement tools</code> to Discover endpoints on the website
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/content-discover1.png"></p>
+<p>Press here to start Content Discovery
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/press-here-with-mouse2.png">
+Then I will use the crawl of scan option to visit all the endpoints on the website
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/scan.png">
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/crawl.png"></p>
+<p>As the content discovery and crawling is working, I need to know the technology the website is working with. One way is by using quickhits.txt file from seclists</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">ffuf</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">FUZZ</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">w</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">usr</span><span style="color:#f92672">/</span><span style="color:#a6e22e">share</span><span style="color:#f92672">/</span><span style="color:#a6e22e">seclists</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Discovery</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Web</span><span style="color:#f92672">-</span><span style="color:#a6e22e">Content</span><span style="color:#f92672">/</span><span style="color:#a6e22e">quickhits</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span> 
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/ffuf1.png">
+From the above about the backend server supports PHP files
+<br>
+Another way to find the technology at the backend is from the error default page type any unkown words to get to the error page. This is the error of Nginx Server
+<img alt="Image" loading="lazy" src="/images/first-blood-v1/nginx-default-page.png"></p>
+<p>From the sitemap you find that the available extensions are <code>php</code>
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/sitemap-3.png"></p>
+<p>So i will fuzz with these extensions <code>PHP</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">ffuf</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">FUZZ</span>  <span style="color:#f92672">-</span><span style="color:#a6e22e">w</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">usr</span><span style="color:#f92672">/</span><span style="color:#a6e22e">share</span><span style="color:#f92672">/</span><span style="color:#a6e22e">seclists</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Discovery</span><span style="color:#f92672">/</span><span style="color:#a6e22e">Web</span><span style="color:#f92672">-</span><span style="color:#a6e22e">Content</span><span style="color:#f92672">/</span><span style="color:#a6e22e">raft</span><span style="color:#f92672">-</span><span style="color:#a6e22e">small</span><span style="color:#f92672">-</span><span style="color:#a6e22e">words</span><span style="color:#f92672">-</span><span style="color:#a6e22e">lowercase</span><span style="color:#f92672">.</span><span style="color:#a6e22e">txt</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">e</span> <span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/fuzzing1.png"></p>
+<p>These are the files I got from Fuzzing &amp; content discovery</p>
+<ul>
+<li>index.php</li>
+<li>go.php</li>
+<li>book.php</li>
+<li>confirmed.php</li>
+<li>locations.php</li>
+<li>menu.php</li>
+<li>yourprofile.php</li>
+<li>admin.php
+<br>
+and <code>/api</code> directory</li>
+</ul>
+<p>I will begin with index.php file from the sitemap we see it accepts <code>act</code> parameter
+<br>
+<strong>First</strong> I will use <code>Param Miner</code> extension to see if it accepts other parameters
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/param-miner1.png">
+<img alt="Image" loading="lazy" src="/images/first-blood-v1/param-miner-guess2.png">
+Then go <code>Extensions - Param Miner - Output</code> as you can see Param Miner has discovered <code>act</code> parameter only
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/param-miner2.png">
+<strong>Second</strong> i will use <a href="https://github.com/s0md3v/Arjun">Arjun</a> tool</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">arjun</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/arjun1.png"></p>
+<p>Let&rsquo;s test the <code>act</code> parameter. We can test with root directory <code>/</code> directly without typing index.php
+<br>
+open the url</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/?</span><span style="color:#a6e22e">act</span><span style="color:#f92672">=</span><span style="color:#a6e22e">test123</span>
+</span></span></code></pre></div><p>Intercept the request with BurpSuite and send it to Repeater tab, check the <code>Auto-scroll to match when text changes</code> box to search for the what you type in the search bar <code>test123</code> on every request
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/Repeater-checkbox1.png"></p>
+<p>At the response the input of <code>act</code> parameter is inside
+<span style="color: red;">&lt;!&ndash;  Invalid action:</span>
+<span style="color: blue;">{User-Input}</span>
+<span style="color: red;">&ndash;&gt;</span>
+Since the user input is reflected at the response let&rsquo;s test for XSS. This is HTML Comment tag let&rsquo;s <span style="color: green;">close the tags</span> and put our <span style="color: blue;">payload</span>
+<br>
+<span style="color: red;">&lt;!&ndash;  Invalid action:</span>
+<span style="color: green;">&ndash;&gt;</span><span style="color: blue;">&lt;script&gt;alert(1)&lt;/script&gt;</span><span style="color: green;">&lt;!</span>
+<span style="color: red;">&ndash;&gt;</span>
+<br>
+As you see <code>script</code> word is removed so maybe it&rsquo;s blacklisting
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/Root-Repeater-test1.png">
+Let&rsquo;s try other payload  <span style="color: blue;">&lt;img src=x onerror=alert(1)&gt;</span>
+It passed
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/Root-Repeater-test2.png">
+Let’s try the payload at the browser now</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/?</span><span style="color:#a6e22e">act</span><span style="color:#f92672">=--%</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">E</span><span style="color:#f92672">%</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">Cimg</span><span style="color:#f92672">%</span><span style="color:#ae81ff">20</span><span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#a6e22e">x</span><span style="color:#f92672">%</span><span style="color:#ae81ff">20</span><span style="color:#a6e22e">onerror</span><span style="color:#f92672">=</span><span style="color:#a6e22e">alert</span>(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">%</span><span style="color:#ae81ff">3</span><span style="color:#a6e22e">C</span><span style="color:#f92672">!--</span>
+</span></span></code></pre></div><p>We have discovered Reflective XSS vulnerability
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/Root-xss1.png"></p>
+<p>Lets now test file <code>go.php</code> i will use Param Miner extension &amp; Arjun tool to see if it accepts any parameters
+<br>
+As we see it accepts <code>returnUrl</code> parameter</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">arjun</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">u</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">go</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">stable</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/arjun2.png">
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/param-miner3.png">
+from the parameter name it can accepts url so we can test for <a href="https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html">open redirection</a> and <a href="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">SSRF</a> vulnerabilities
+<br>
+lets test for open redirection first</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">go</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">returnUrl</span><span style="color:#f92672">=</span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/openredirect1.png">
+If you submit the url at the browser you will be redirected to google.com so it&rsquo;s vulnerable to Open Redirection
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/openredirect1.1.png">
+Let&rsquo;s test now for SSRF. From the image below this endpoint is not vulnerable to SSRF</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">go</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">returnUrl</span><span style="color:#f92672">=</span><span style="color:#a6e22e">http</span><span style="color:#f92672">://</span><span style="color:#ae81ff">127.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0.1</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/ssrf-fail1.png"></p>
+<p>Let&rsquo;s now test file <code>book.php</code> from the site map we see it accepts <code>promoCode</code> parameter. I tested also with Param Miner &amp; Arjun to see if it accepts other parameters
+Let&rsquo;s open the url with the parameter provided at Site Map in the Browser</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">book</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">promoCode</span><span style="color:#f92672">=</span><span style="color:#a6e22e">UKONLY</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/bookpage1.png">
+If we look at the HTTPHistory through Burp Proxy tab we see that the value of <code>promoCode</code> parameter is set on <code>promotion</code> on the <code>Set-Cookie</code> Header
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-proxy-promocode.png">
+We now need to know if this value appears on other page so we can see if can make use of it
+<br>
+Right Click on fastfoodhackings directory and from <code>Engagement tools</code> choose <code>Search</code>
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/search-promotion.png"></p>
+<p>I want to search if <code>UKONLY</code> appears on the Response Body of any page so i will check only on <code>Response Body</code>
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/ukonly-search.png">
+As we see two pages appears <code>menu.php</code> and<code>locations.php</code>
+<br>
+lets begin with <code>locations.php</code>.If you visit the following url and view the <code>Page Source</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">locations</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p>You will see that <code>UKONLY</code> is inside href tag which means it&rsquo;s hardcoded value
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/locations-ukpromo.png"></p>
+<p>lets see now the menu.php file. visit the following url and view the <code>Page Source</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">menu</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/menu-php-promotionparameter1.png">
+Let&rsquo;s confirm that by changing the value of <code>promoCode</code> it will be changed on the menu.php page. I will change it to <code>test123</code> by visiting the following url</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">book</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">promoCode</span><span style="color:#f92672">=</span><span style="color:#a6e22e">test123</span>
+</span></span></code></pre></div><p>Then go to menu.php and view the <code>Page Source</code> as you see the value has changed
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/menu-php-promotionparameter2.png"></p>
+<p>Since the value is reflected we will test for XSS vulnerability. our input is inside
+<span style="color: red;">var promotion = '</span><span style="color: blue;">{User-Input}</span><span style="color: red;">'</span>
+since var and it&rsquo;s already inside <span style="color: blue;">&lt;script&gt; &lt;/script&gt;</span>
+let&rsquo;s try to <span style="color: green;">close the variable</span> and put our payload
+<span style="color: green;">';</span><span style="color: blue;">alert(1);</span><span style="color: green;">var x='y</span>
+we have closed the promotion variable and put our payload and then put other variable to close the last single quote
+<span style="color: red;">var promotion = '</span><span style="color: blue;"><span style="color: green;">';</span><span style="color: blue;">alert(1);</span><span style="color: green;">var x='y</span></span><span style="color: red;">'</span>
+<br>
+Let&rsquo;s test it. Open the following URL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">book</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">promoCode</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;;alert(1);var x=&#39;</span><span style="color:#a6e22e">y</span>
+</span></span></code></pre></div><p>Then open the menu.php file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">menu</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p>and View the Page Source. you will see that <code>alert</code> word disapered so it&rsquo;s blacklisted. I tried the word <code>confirm</code> it was also blacklisted
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/menu-php-promotionparameter3.png">
+If the filter removes the whole keyword <code>alert</code> let&rsquo;s try to divide it into two parts <code>al</code> &amp; <code>ipt</code> and put word <code>ert</code> between them so when it&rsquo;s removed they will be concatenated and provide the wanted <code>alert</code> word. so our payload should now be
+<span style="color: green;">';</span><span style="color: blue;">alalertert(1);</span><span style="color: green;">var x='y</span>
+<br>
+Let&rsquo;s test it. Open the following URL</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">book</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">promoCode</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;;alalertert(1);var x=&#39;</span><span style="color:#a6e22e">y</span>
+</span></span></code></pre></div><p>Then visit the menu.php endpoint</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">menu</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p>You will see that the xss is triggered. This is Stored XSS vulnerability
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/menu-xss1.png"></p>
+<p>When we visited book.php endpoint we see a form</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">book</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p><img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form1.png">
+Let&rsquo;s fill it and then press RESERVE BOOKING Button
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form2.png">
+You get this
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form3.png">
+If you go Burp History at the Proxy Tab. You will see that this request is generated
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form4.png">
+Let&rsquo;s send the request to the Repeater. If you shade the value of <code>order_id</code> parameter you will find it&rsquo;s base64 encoded value of our Order ID number <code>42069</code>
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form5.png">
+Let&rsquo;s try to change this Order ID number to see if we can access other users data, i will change it to <code>42067</code> and then press <code>Apply changes</code> Button to take effect at the request
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form6.png">
+As shown at the image we have accessed other user data, so it&rsquo;s vulnerable to <a href="https://cheatsheetseries.owasp.org/cheatsheets/Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html">IDOR</a> vulnerability
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/book-form7.png"></p>
+<p>Lets now test <code>/api</code> endpoints
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/api-sitemap1.png">
+As you see their is a file loader.php that has <code>f</code> parameter</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">www</span><span style="color:#f92672">.</span><span style="color:#a6e22e">bugbountytraining</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">fastfoodhackings</span><span style="color:#f92672">/</span><span style="color:#a6e22e">api</span><span style="color:#f92672">/</span><span style="color:#a6e22e">loader</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span><span style="color:#f92672">?</span><span style="color:#a6e22e">f</span><span style="color:#f92672">=/</span><span style="color:#a6e22e">reviews</span><span style="color:#f92672">.</span><span style="color:#a6e22e">php</span>
+</span></span></code></pre></div><p>Let&rsquo;s intercept the request with Burp and send it to Repeater. When I see parameter=file the first thing that comes to my mind is to test for <a href="https://owasp.org/www-community/attacks/Path_Traversal">LFI</a> vulnerability. since the backend server is linux i will try this payload <code>../../../../../etc/passwd</code>
+<br>
+It didn&rsquo;t work
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/etc-passwd-payload.png">
+Let&rsquo;s try to send an empty parameter and see what happens. As we see it reveals an internal URL path and an Auth Bearer token
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/loader-file-empty-payload.png">
+Let&rsquo;s test this info. I will test for <a href="https://owasp.org/Top10/A10_2021-Server-Side_Request_Forgery_%28SSRF%29/">SSRF</a> vulnerability to see I can access internal paths. i have used the url <code>http://127.0.0.1/</code> to load the local internal website. As you see in the image below i got access to the internal website so it is vulnerable to SSRF vulnerability
+<img alt="Image" loading="lazy" src="/images/fastfoodhackings/ssrf1.png"></p>
+<p>For all the vulnerabilities you can see the disclosed vulnerabilities here
+<a href="https://www.bugbountyhunter.com/playground">https://www.bugbountyhunter.com/playground</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/web_pentesting/">Web_pentesting</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+<script>
+    mediumZoom('img', {
+        background: 'rgba(0, 0, 0, 0.8)',
+        margin: 20
+    });
+</script>
+</body>
+
+</html>
