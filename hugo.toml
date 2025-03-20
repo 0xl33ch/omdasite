@@ -43,6 +43,12 @@ theme = 'hugo-PaperMod'
   weight = 3
   pre = "<i class='fas fa-heart'></i>&nbsp;"
 
+[[menu.main]]
+  name = "References"
+  url = "/reference/"
+  weight = 4
+  pre = "<i class='fas fa-bookmark'></i>&nbsp;"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
