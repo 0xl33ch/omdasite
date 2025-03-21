@@ -16,6 +16,8 @@ https://vulnerable.codes/
 
 ### Mobile
 https://app.hextree.io/map/android
+<br>
+https://www.mobilehackinglab.com/
 
 ### Cloud
 https://pwnedlabs.io/
@@ -26,3 +28,5 @@ https://ctftime.org/
 <br>
 https://www.wechall.net/active_sites
 
+### Blogs
+https://midnightcomputerlab.net/directory/
