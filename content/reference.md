@@ -20,6 +20,8 @@ https://app.hextree.io/map/android
 https://www.mobilehackinglab.com/
 
 ### Cloud
+https://hackingthe.cloud
+<br>
 https://pwnedlabs.io/
 
 
