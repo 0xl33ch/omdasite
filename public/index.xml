@@ -2,55 +2,55 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Security Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://192.168.1.20:1313/</link>
     <description>Recent content on Security Blog</description>
     <generator>Hugo -- 0.145.0</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://192.168.1.20:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacking FirstBloodHackers v1.0</title>
-      <link>http://localhost:1313/posts/hacking-first-blood-hackers-v1/</link>
+      <link>http://192.168.1.20:1313/posts/hacking-first-blood-hackers-v1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hacking-first-blood-hackers-v1/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/First-Blood-v1.0-Poster.png&#34;&gt;&lt;/p&gt;
+      <guid>http://192.168.1.20:1313/posts/hacking-first-blood-hackers-v1/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/First-Blood-v1.0-Poster.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article I will reveal techniques I used when pentesting a web application i will try it on &lt;code&gt;FirstBloodHackers v1.0&lt;/code&gt; it&amp;rsquo;s a hospital website which is a hackevent of bugbountyhunter.com website&lt;/p&gt;
 &lt;p&gt;I opened burpsuite and opened the given url&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;://&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;f22246f644be&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;l33ch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;firstbloodhackers&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I added the URL to scope to see only the files related to this url
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/burp-scope.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/burp-scope.png&#34;&gt;
 Press here
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/press-here-with-mouse.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/press-here-with-mouse.png&#34;&gt;
 check this box
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/checkbox1.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/checkbox1.png&#34;&gt;
 Choose &lt;code&gt;Discover content&lt;/code&gt; from &lt;code&gt;Engagement tools&lt;/code&gt; to visit all the endpoints on the website
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/content-discover1.png&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/content-discover1.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hacking FastFoodHackings</title>
-      <link>http://localhost:1313/posts/hacking-fastfoodhackings/</link>
+      <link>http://192.168.1.20:1313/posts/hacking-fastfoodhackings/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hacking-fastfoodhackings/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/fastfoodhackings/fastfoodhackings-poster.png&#34;&gt;&lt;/p&gt;
+      <guid>http://192.168.1.20:1313/posts/hacking-fastfoodhackings/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/fastfoodhackings/fastfoodhackings-poster.png&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In this article I will continue revealing techniques I used when performing penetration testing on a web application I will try on &lt;code&gt;FastFoodHackings&lt;/code&gt; it is a  small free demo website from bugbountyhunter.com website you can access it from this URL&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;https&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;://&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;bugbountytraining&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fastfoodhackings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I added the URL to scope to see only the files related to this URL
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/fastfoodhackings/burp-scope.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/fastfoodhackings/burp-scope.png&#34;&gt;
 Press here
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/fastfoodhackings/press-here-with-mouse.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/fastfoodhackings/press-here-with-mouse.png&#34;&gt;
 check this box
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/first-blood-v1/checkbox1.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/first-blood-v1/checkbox1.png&#34;&gt;
 Choose &lt;code&gt;discover content&lt;/code&gt; from &lt;code&gt;Engagement tools&lt;/code&gt; to Discover endpoints on the website
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/fastfoodhackings/content-discover1.png&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/fastfoodhackings/content-discover1.png&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE-2023-23489 - Easy Digital Downloads WordPress Plugin &lt; 3.1.4 - unauthenticated SQL injection</title>
-      <link>http://localhost:1313/posts/cve-2023-23489-easy-digital-downloads-wordpress-plugin-less-314-unauthenticated-sqli/</link>
+      <link>http://192.168.1.20:1313/posts/cve-2023-23489-easy-digital-downloads-wordpress-plugin-less-314-unauthenticated-sqli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cve-2023-23489-easy-digital-downloads-wordpress-plugin-less-314-unauthenticated-sqli/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-23489/cve-poster.png&#34;&gt;&lt;/p&gt;
+      <guid>http://192.168.1.20:1313/posts/cve-2023-23489-easy-digital-downloads-wordpress-plugin-less-314-unauthenticated-sqli/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-23489/cve-poster.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
 &lt;p&gt;The Easy Digital Downloads WordPress Plugin, versions 3.1.0.2 &amp;amp; 3.1.0.3, is affected by an unauthenticated SQL injection vulnerability in the &amp;rsquo;s&amp;rsquo; parameter of its &amp;rsquo;edd_download_search&amp;rsquo; action.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-23489/cve-2023-23489-severity.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-23489/cve-2023-23489-severity.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;lab-setup&#34;&gt;Lab-Setup&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir cve-2023-23489
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Dockerfile&lt;/code&gt;&lt;/p&gt;
@@ -89,26 +89,26 @@ Choose &lt;code&gt;discover content&lt;/code&gt; from &lt;code&gt;Engagement too
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WORKDIR&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;
 I got the path of Xdebug Configuration files &lt;code&gt;/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini&lt;/code&gt; when the docker container is up i executed this command to get it &lt;code&gt;php --ini&lt;/code&gt;
-&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-23489/php-ini.png&#34;&gt;
+&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-23489/php-ini.png&#34;&gt;
 &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE-2023-3118 - Export All URLs &lt; 4.6 - Reflected XSS</title>
-      <link>http://localhost:1313/posts/cve-2023-3118-reflected-xss-export-all-urls-less-4.6/</link>
+      <link>http://192.168.1.20:1313/posts/cve-2023-3118-reflected-xss-export-all-urls-less-4.6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cve-2023-3118-reflected-xss-export-all-urls-less-4.6/</guid>
-      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-3118/cve-poster.png&#34;&gt;&lt;/p&gt;
+      <guid>http://192.168.1.20:1313/posts/cve-2023-3118-reflected-xss-export-all-urls-less-4.6/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-3118/cve-poster.png&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;on-this-page&#34;&gt;On this page&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lab-setup&#34;&gt;Lab Setup&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#blackbox-testing&#34;&gt;BlackBox Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#whitebox-testing&#34;&gt;WhiteBox Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#patch-diffing&#34;&gt;Patch Diffing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
 &lt;p&gt;The Export All URLs WordPress plugin before 4.6 does not sanitise and escape a parameter before outputting them back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-3118/cve-2023-3118-security.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-3118/cve-2023-3118-security.png&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;lab-setup&#34;&gt;Lab-Setup&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir cve-2023-3118
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;create &lt;code&gt;docker-compose.yml&lt;/code&gt; file&lt;/p&gt;
@@ -145,13 +145,51 @@ I got the path of Xdebug Configuration files &lt;code&gt;/usr/local/etc/php/conf
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;db_data&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;wordpress_data&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;then run &lt;code&gt;docker-compose up&lt;/code&gt; to run the image
-&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/images/cve-2023-3118/docker-compose-up.png&#34;&gt;&lt;/p&gt;</description>
+&lt;img alt=&#34;Description of Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2023-3118/docker-compose-up.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CVE-2025-26943 - Easy Quotes &lt; 1.2.3 - Unauthenticated SQL Injection</title>
+      <link>http://192.168.1.20:1313/posts/cve-2025-26943-easy-quotes-less-123-unauthenticated-sqli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.20:1313/posts/cve-2025-26943-easy-quotes-less-123-unauthenticated-sqli/</guid>
+      <description>&lt;h2 id=&#34;on-this-page&#34;&gt;On this page&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#description&#34;&gt;Description&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lab-setup&#34;&gt;Lab Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#whitebox-testing&#34;&gt;WhiteBox Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#patch-diffing&#34;&gt;Patch Diffing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;description&#34;&gt;Description&lt;/h3&gt;
+&lt;p&gt;Improper Neutralization of Special Elements used in an SQL command (&amp;lsquo;SQL Injection&amp;rsquo;) vulnerability in Jürgen Müller Easy Quotes allows Blind SQL Injection. This issue affects Easy Quotes: from n/a through 1.2.2.&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Image&#34; loading=&#34;lazy&#34; src=&#34;http://192.168.1.20:1313/images/cve-2025-26943/cve-2025-26943-severity.png&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;lab-setup&#34;&gt;Lab-Setup&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir cve-2025-26943
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Dockerfile&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wordpress&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Install development tools and dependencies
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;RUN&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;apt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;apt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;install&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;y&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;vim&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;git&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;unzip&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;\&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;rm&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;rf&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lib&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;apt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;lists&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Set permissions for WordPress files
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;RUN&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;chown&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;R&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;data&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Enable Debugging
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;COPY&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;wp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;php&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;wp&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;config&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Set working directory
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;WORKDIR&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;www&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reference/</link>
+      <link>http://192.168.1.20:1313/reference/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reference/</guid>
+      <guid>http://192.168.1.20:1313/reference/</guid>
       <description>&lt;h3 id=&#34;free-cyber-security-courses&#34;&gt;Free Cyber Security Courses&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://samsclass.info/&#34;&gt;https://samsclass.info/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;labs&#34;&gt;LABS&lt;/h3&gt;
@@ -169,7 +207,9 @@ I got the path of Xdebug Configuration files &lt;code&gt;/usr/local/etc/php/conf
 &lt;br&gt;
 &lt;a href=&#34;https://www.mobilehackinglab.com/&#34;&gt;https://www.mobilehackinglab.com/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;cloud&#34;&gt;Cloud&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://pwnedlabs.io/&#34;&gt;https://pwnedlabs.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hackingthe.cloud&#34;&gt;https://hackingthe.cloud&lt;/a&gt;
+&lt;br&gt;
+&lt;a href=&#34;https://pwnedlabs.io/&#34;&gt;https://pwnedlabs.io/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;ctf&#34;&gt;CTF&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://ctftime.org/&#34;&gt;https://ctftime.org/&lt;/a&gt;
 &lt;br&gt;
@@ -179,9 +219,9 @@ I got the path of Xdebug Configuration files &lt;code&gt;/usr/local/etc/php/conf
     </item>
     <item>
       <title>About Me</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://192.168.1.20:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://192.168.1.20:1313/about/</guid>
       <description>&lt;p&gt;My name is Emad El Araby i am a Penetration Testing Engineer with over seven years of experience in network, mobile, and web application security. I specialize in identifying vulnerabilities, conducting in-depth security assessments, and simulating real-world attack scenarios to strengthen cybersecurity defenses.&lt;/p&gt;
 &lt;p&gt;I hold multiple industry-recognized certifications, including &lt;code&gt;CRTP, CRTE, eWPTX, GSEC, GWAPT, GPEN, GMOB, GXPN, OSCP, and OSWE&lt;/code&gt; demonstrating my expertise in offensive security and advanced exploitation techniques.&lt;/p&gt;</description>
     </item>
