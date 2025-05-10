@@ -29,6 +29,8 @@ https://pwnedlabs.io/
 https://ctftime.org/
 <br>
 https://www.wechall.net/active_sites
+<br>
+https://www.ctfiot.com/
 
 ### Blogs
 https://midnightcomputerlab.net/directory/
